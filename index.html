@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place-Keeper</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <div class="container-flex f-col">
+        <header>
+            <h1 class="page-title">Place Keeper</h1>
+            <h4 class="page-sub-title">keep you on the ground</h4>
+        </header>
+        <nav class="container-flex f-row" data-color="LABELS_COLOR_1">
+            <ul>
+                <div class="user-name">
+                    <h2 contenteditable="true" onblur="onSaveUserName(this)">yourName</h2>
+                </div>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">My place</a>
+                </li>
+                <li>
+                    <a href="user-prefs.html">Setting</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="container-flex f-col" data-color="MAIN_COLOR_1">
+            <p class="main-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis, totam beatae et unde
+                optio ut quos placeat ullam corporis architecto cupiditate explicabo neque dolorum ratione aliquam omnis
+                accusamus natus mollitia. Voluptatem debitis neque inventore accusantium corporis dolores obcaecati
+                delectus corrupti? Rerum sequi quisquam, deserunt laudantium eaque mollitia molestias? Impedit.
+            </p>
+        </main>
+        <footer data-color="LABELS_COLOR_1">
+            Elhanan Avihail &copy; 2020
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/styling.js"></script>
+</body>
+
+</html>

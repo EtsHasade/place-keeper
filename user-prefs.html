@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place-Keeper</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <div class="container-flex f-col">
+        <header>
+            <h1 class="page-title">Place Keeper</h1>
+            <h4 class="page-sub-title">keep you on the ground</h4>
+        </header>
+        <nav class="container-flex f-row">
+            <ul>
+                <div class="user-name">
+                    <h2 contenteditable="true" onblur="onSaveUserName(this)">yourName</h2>
+                </div>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">My place</a>
+                </li>
+                <li>
+                    <a href="user-prefs.html">Setting</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="container-flex f-col" data-color="MAIN_COLOR_1">
+            <section name="subjects">
+                <nav class="setting-nav container-flex f-row" data-color="LABELS_COLOR_1">
+                    <ul>
+                        <li>
+                            <a href="#color-setting-form" class="curr-active">Colors</a>
+                        </li>
+                        <li>
+                            <a href="#">Languge</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </section>
+            <form name="colors-form" class="color-setting-form container-flex f-col" id="color-setting-form" onsubmit="onChooseColors(event)">
+                <div class="bg-color">
+                    <label for="bgMainColor">Background map color</label>
+                    <input type="color" name="bgMainColor" id="bgMainColor" value="#335571">
+                </div>
+                <div class="labels-color">
+                    <label for="bgLabelsColor">Labels color</label>
+                    <input type="color" name="bgLabelsColor" id="bgLabelsColor" value="#0e3453">
+                </div>
+                <div class="text-color">
+                    <label for="textColor">text color</label>
+                    <input type="color" name="textColor" id="textColor" value="#ffffff">
+                </div>
+                <div class="btn-form">
+                    <button type="button" onclick="restStyle()">default colors</button>
+                    <button>Save</button>
+                </div>
+            </form>
+        </main>
+        <footer data-color="LABELS_COLOR_1">
+            Elhanan Avihail &copy; 2020
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/styling.js"></script>
+</body>
+
+</html>

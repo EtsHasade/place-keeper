@@ -1,0 +1,178 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}
+
+.container-flex {
+    display: flex;
+}
+
+
+.container-flex.f-row{
+    flex-direction: row;
+}
+
+
+.container-flex.f-col{
+    height: 100%;
+    flex-direction: column;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+}
+header {
+    background-image:  url(../img/header-bg.png), url(../img/header-bg2.jpg);
+    background-size: cover, 100%;
+    background-position:  bottom, top; 
+    background-repeat: no-repeat, no-repeat;
+    height: 50vh;
+    text-align: center;
+    /* color: rgb(255, 255, 255); */
+    text-shadow: 0px 3px 5px black;
+    transition: 0.5s;
+
+}
+
+@media screen and (min-width: 550px) {
+    header {
+        background-position-y: 80%,top;
+    }
+}
+
+header h1 {
+    margin-top: 3em;
+    margin-bottom: 0;
+    padding-top: 0.2em;
+    /* background-color: rgba(2, 1, 1, 0.26); */
+}
+
+header h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    /* background-color: rgba(2, 1, 1, 0.26); */
+}
+
+
+
+nav {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    padding: 0;
+}
+@media screen and (min-width: 320px){
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-inline-end: 5vw;
+    /* color: #ffffff; */
+    padding: 0 1.5vw;
+}
+
+nav h2, nav div {
+    position: absolute;
+    left: 0;
+    top: 0vh;
+    padding: 0.2em;
+    border-radius: 0 5px 5px 0;
+    display: inline;
+    /* color: #ffffff; */
+    background: rgba(0, 0, 0, 0.438);
+    box-shadow: #000000 0 2px 3px;
+}
+nav a {
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    color: inherit;
+    padding: 0 1.5vw;
+    text-decoration: none;
+}
+
+nav a:hover {
+    box-shadow: rgb(74, 191, 226) 0 2px 9px;
+
+}
+
+.setting-nav {
+    background-color: #0e3453;
+}
+
+
+main {
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: justify;
+    background: #335571;
+    /* background-color: rgba(14, 52, 83, 0.644); */
+    background-image: url(../img/053-free-vector-world-map.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+
+}
+
+
+
+main p {
+    padding: 1em;
+    margin: 2em;
+    background: rgba(0, 0, 0, 0.767);
+    font-size: large;
+    /* color: #ffffff; */
+}
+
+main form {
+    /* color: #ffffff; */
+    padding: 1em;
+    margin: 2em;
+    min-height: 20vh;
+    background-color:rgba(0, 0, 0, 0.767);
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+@media screen and (max-width: 315px) {
+    main form div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+main form:target {
+    visibility: visible;
+}
+
+main form div {
+    margin: auto;
+    min-width: fit-content;
+}
+
+
+footer {
+    background: rgb(11, 75, 128);
+    padding: 0.5em;
+    /* color: #ffffff; */
+}
