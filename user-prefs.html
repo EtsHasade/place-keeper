@@ -39,13 +39,14 @@
                             <a href="#color-setting-form" class="curr-active">Colors</a>
                         </li>
                         <li>
-                            <a href="#">Languge</a>
+                            <a href="#date-form">Timing</a>
                         </li>
                     </ul>
                 </nav>
 
             </section>
-            <form name="colors-form" class="color-setting-form container-flex f-col" id="color-setting-form" onsubmit="onChooseColors(event)">
+            <form name="colors-form" class="color-setting-form" id="color-setting-form"
+                onsubmit="onChooseColors(event)">
                 <div class="bg-color">
                     <label for="bgMainColor">Background map color</label>
                     <input type="color" name="bgMainColor" id="bgMainColor" value="#335571">
@@ -62,6 +63,18 @@
                     <button type="button" onclick="restStyle()">default colors</button>
                     <button>Save</button>
                 </div>
+            </form>
+            <form name="date-form" class="date-form" id="date-form" onsubmit="onChooseColors(event)">
+                <p>Enter Yor Birth day, to know where to go to day</p>
+                <div class="date">
+                    <label for="date-birth">your birth day</label>
+                    <input type="date" name="date-birth" id="date-birth">
+                </div>
+                <div class="btn-form">
+                    <button type="reset">clear</button>
+                    <button>Save</button>
+                </div>
+
             </form>
         </main>
         <footer data-color="LABELS_COLOR_1">

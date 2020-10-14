@@ -30,7 +30,7 @@ header {
     background-size: cover, 100%;
     background-position:  bottom, top; 
     background-repeat: no-repeat, no-repeat;
-    height: 50vh;
+    max-height: 50vh;
     text-align: center;
     /* color: rgb(255, 255, 255); */
     text-shadow: 0px 3px 5px black;
@@ -150,24 +150,29 @@ main form {
     min-height: 20vh;
     background-color:rgba(0, 0, 0, 0.767);
     flex-wrap: wrap;
-    visibility: hidden;
-}
-@media screen and (max-width: 315px) {
-    main form div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    display: none;
 }
 
 
 main form:target {
-    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 main form div {
     margin: auto;
     min-width: fit-content;
+}
+@media screen and (max-width: 315px) {
+    main form:target div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
